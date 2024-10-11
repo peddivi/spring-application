@@ -10,7 +10,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller("error")
 public class ErrorController {
 	
-	@ExceptionHandler(Exception.class)
+	/**
+	 * Handles exceptions thrown during request processing.
+	 * 
+	 * This method serves as a global exception handler for the application.
+	 * It creates a ModelAndView object with exception details and the URL
+	 * that caused the exception, then sets the view name to "error".
+	 * 
+	 * @param request The HttpServletRequest object containing details of the request
+	 * @param ex The Exception object that was thrown
+	 * @return ModelAndView object with error details and view name set to "error"
+	 * @throws None
+	 */	@ExceptionHandler(Exception.class)
 	public ModelAndView handleException
 		(HttpServletRequest request, Exception ex){
 		ModelAndView mv = new ModelAndView();
