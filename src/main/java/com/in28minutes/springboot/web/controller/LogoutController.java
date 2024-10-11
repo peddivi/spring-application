@@ -16,6 +16,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class LogoutController {
 
+	/**
+	* Logs out the currently authenticated user and redirects to the home page.
+	* 
+	* This method handles the logout process by clearing the user's authentication
+	* and redirecting them to the application's root URL.
+	* 
+	* @param request The HttpServletRequest object containing the request the client made to the server
+	* @param response The HttpServletResponse object that will be sent back to the client
+	* @return A string indicating the redirect URL after successful logout
+	*/
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(HttpServletRequest request,
 			HttpServletResponse response) {
