@@ -1,18 +1,3 @@
-name: spring ci
-on:
-  push:
-    branches:
-      - main  # Trigger on push to the 'main' branch
-
-  pull_request:
-    branches:
-      - main  # Trigger on PRs targeting 'main' branch
-
-  workflow_dispatch:  # Enables manual trigger from GitHub UI
-
-
 jobs:
-
   ci-build:
-    name: java-ci build
     uses: peddivi/GitHub-cicd/.github/workflows/java-ci.yml@main
