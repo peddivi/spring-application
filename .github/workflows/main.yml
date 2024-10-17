@@ -1,1 +1,12 @@
-uses: peddivi/GitHub-cicd/.github/workflows/java-ci.yml
+name: spring ci
+
+on:
+  push:
+    branches:
+    - main
+    
+jobs:
+
+  ci-build:
+    name: java-ci build
+    uses: peddivi/GitHub-cicd/.github/workflows/java-ci.yml@main
