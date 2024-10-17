@@ -11,4 +11,4 @@ on:
   workflow_dispatch:  # Enables manual trigger from GitHub UI
 
 jobs:
-    uses: peddivi/GitHub-cicd/.github/workflows/java-ci.yml@main
+  uses: peddivi/GitHub-cicd/.github/workflows/java-ci.yml@main
